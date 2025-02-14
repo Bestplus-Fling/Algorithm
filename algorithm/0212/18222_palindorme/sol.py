@@ -35,7 +35,8 @@ def check_palin(word_row, word_col):
 T = int(input())   # Test case 개수를 받아오는 코드
 for tc in range(1, T+1):
     N, M = map(int, input().split())
-    word_arr = [input() for _ in range(N)]
+    origin_max = [input() for _ in range(N)]
+    word_arr = list(map(list, zip(*origin_max)))
     word_list = list(zip(*word_arr[::-1]))
 
     for i in range(N):
@@ -43,7 +44,7 @@ for tc in range(1, T+1):
         if search:
             break
 
-    if type(search) is tuple:
-        print(f'#{tc} {"".join(search)}')
-    else:
-        print(f'#{tc} {search}')
+    # if type(search) is tuple:
+    #     print(f'#{tc} {"".join(search)}')
+    # else:
+    print(f'#{tc} {"".join(search)}')

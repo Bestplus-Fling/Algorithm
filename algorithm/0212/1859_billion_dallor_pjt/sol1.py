@@ -2,7 +2,12 @@ import sys
 sys.stdin = open('input.txt', 'r')
 #########################################
 
-
+'''
+원재 썰어버리기 프로젝트
+내장함수 대신 수제작 함수 사용하기
+split 안쓰고 스택으로 쌓아서 저장
+문자인 숫자를 숫자로 바꾸고
+그 다음 숫자가 그 전에 숫자보다 작다면 차를 더한다.'''
 def max_arr(x):
     max_num, max_idx = 0, -1
     for o in range(x, N):
@@ -16,7 +21,7 @@ def max_arr(x):
 T = int(input())  # Test case 개수를 받아오는 코드
 for tc in range(1, T + 1):
     N = int(input())
-    val_list = list(map(int, input().split()))
+    val_list = input()
     tax_coming = 0
     max_val = max(val_list[:])   # max_arr(0)
     stack = []
