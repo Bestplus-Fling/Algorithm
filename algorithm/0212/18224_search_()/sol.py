@@ -7,11 +7,18 @@ def search(work):
     dic = {')': '(', ']': '[', '}': '{'}
     stc = []
     for txt in work:
+        # 열린 괄호(value)일 경우
         if txt in dic.values():
+            # 스택에 저장
             stc.append(txt)
             continue
+        # 닫힌 괄호(key)일 경우
         if txt in dic.keys():
-            if txt == stc.pop():
+            # 스택 top과 현재 key의 value가 일치할 때 제거
+            if dic[txt] == stc[-1]:
+                stc.pop()
+            # 쌍이 안맞으면 0을 반환
+            else:
                 return 0
     if not stc:
         return 1

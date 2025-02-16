@@ -18,10 +18,29 @@ def max_arr(x):
     return max_idx
 
 
+def slicing(tpl):
+    idx = 0
+    comp_list = []
+    temp_num = []
+    while len(tpl) != idx:
+        if tpl[idx] == ' ':
+            comp_list.append(int(''.join(temp_num)))
+            temp_num.clear()
+            idx += 1
+            continue
+        temp_num.append(temp_list[idx])
+        idx += 1
+    comp_list.append(int(''.join(temp_num)))
+    return comp_list
+
+
+
 T = int(input())  # Test case 개수를 받아오는 코드
 for tc in range(1, T + 1):
     N = int(input())
-    val_list = input()
+    temp_list = input()
+    val_list = slicing(temp_list)
+    # print(val_list)
     tax_coming = 0
     max_val = max(val_list[:])   # max_arr(0)
     stack = []

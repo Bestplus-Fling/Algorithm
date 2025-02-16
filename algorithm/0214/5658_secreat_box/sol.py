@@ -13,7 +13,7 @@ def search_index(insert_num):
         # 배열에 값이 있고 배열의 길이가 K을 넘어가지 않을 때 내림차순으로 정렬
         if result and len(result) > idx:
             # result[idx] 값이 매개변수보다 작으면 idx위치에 insert
-            if  int(result[idx], 16) < int(insert_num, 16):
+            if int(result[idx], 16) < int(insert_num, 16):
                 result.insert(idx, insert_num)
                 break
             # result[idx]값이랑 동일하거나 idx가 len(result)-1일 경우 추가하지 않고 return한다.
