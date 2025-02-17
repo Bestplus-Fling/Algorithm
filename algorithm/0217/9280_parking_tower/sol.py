@@ -6,7 +6,7 @@ T = int(input())   # Test case 개수를 받아오는 코드
 for tc in range(1, T+1):
     N, M = map(int, input().split())
     # 주차 위치별 요금
-    payment = [int(input()) for _ in range(N)]
+    payment = [(_+1, int(input())) for _ in range(N)]
     # 차량 별 무게
     car_weight = [int(input()) for _ in range(M)]
     # 입출차 기록 확인
