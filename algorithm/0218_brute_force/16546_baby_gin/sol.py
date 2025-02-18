@@ -14,7 +14,7 @@ sys.stdin = open('input.txt', 'r')
 
 T = int(input())   # Test case 개수를 받아오는 코드
 for tc in range(1, T+1):
-    arr = list(map(int, input()))
+    arr = list(map(int, input().strip()))
     arr_dict = {}
     for i in arr:
         arr_dict[i] = arr_dict.get(i, 0) + 1
