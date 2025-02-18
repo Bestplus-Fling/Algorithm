@@ -9,25 +9,27 @@ sys.stdin = open('input.txt', 'r')
 세로로 자르는 점선 => 1과 점선 번호
 """
 
-from collections import deque
+# from collections import deque
 
 T = int(input())   # Test case 개수를 받아오는 코드
 for tc in range(1, T+1):
+
     N, M = map(int, input().split())
     cut_cnt = int(input())
     arr = [tuple(map(int, input().split())) for _ in range(cut_cnt)]
-    row, col = [], []
-    # cross, index = arr[0]
-    # first_idx = (index, M) if cross == 0 else (N, index)
-    # case = [(0, 0), first_idx, (N, M)]
+    row, col = [0, M], [0, N]
 
     for cross, index in arr:
         if cross == 0:
             row.append(index)
         else:
             col.append(index)
-    row = deque(sorted(row))
-    col = deque(sorted(col))
+
+    row.sort()
+    col.sort()
     max_wide = 0
-    while True:
+    for i in range(1, len(row)):
+        for j in range(1, len(col)):
+            max_wide = max(max_wide, (row[i] - row[i - 1]) * (col[j] - col[j - 1]))
+    print(max_wide)
 
