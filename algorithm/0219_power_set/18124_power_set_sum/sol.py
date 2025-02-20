@@ -9,12 +9,15 @@ sys.stdin = open('input.txt', 'r')
 
 def power_set(idx, num_sum, cnt):
     global count
-    if cnt != 0 and num_sum == 0:
-        count = True
+    # idx(depth)가 배열 길이(문제에서 10개의 정수만 준다고 했음)에 도달하면 종료
     if idx == 10:
+        # 공집합을 제외한 나머지 집합들의 합이 0일 경우 count를 True로 변경
+        if cnt != 0 and num_sum == 0:
+            count = True
         return
-
+    # 현재 arr[idx]를 선택했을 때의 경우를 탐색
     power_set(idx + 1, num_sum + arr[idx], cnt + 1)
+    # 현재 arr[idx]를 선택하지 않았을 때의 경우를 탐색
     power_set(idx + 1, num_sum, cnt)
 
 

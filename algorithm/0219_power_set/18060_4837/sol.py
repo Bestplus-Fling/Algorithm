@@ -14,7 +14,6 @@ def power_set(idx, num_sum, cnt):
     # 종료조건 : num_sum의 배열 길이가 N이고 sum(num_sum)이 K와 같다면
     if cnt == N:
         count += 1 if num_sum == K else 0
-        # print(num_sum)
         return
     # 종료2: idx가 len(arr)과 같아지는 경우
     if idx == len(arr):
@@ -30,10 +29,8 @@ arr = [i for i in range(1, 13)]
 T = int(input())   # Test case 개수를 받아오는 코드
 for tc in range(1, T+1):
     N, K = map(int, input().split())
-    # print(arr)
     count = 0
-    # print(N, K, arr)
-    power_set(0, 0 ,0)
+    power_set(0, 0, 0)
     print(f'#{tc} {count}')
 
 
