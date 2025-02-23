@@ -15,6 +15,7 @@ for Tx, Ty in points:
     x = Tx - Ax     # x축의 거리
     y = Ty - Ay     # y축의 거리
     r = math.sqrt(x**2 + y**2)      # 거리 정보
+    
     angle = math.degrees(math.atan2(y, x))      # 각도 정보
     distance_list.append((r, angle))
 
