@@ -25,7 +25,7 @@ for i in range(N):
             print('D')
             continue
     for j in range(4, 0, -1):
-        an, bn = ai.count(j), bi.count(j)
+        an, bn = ai.val_TF(j), bi.val_TF(j)
         if an == bn:
             continue
         if an > bn:
