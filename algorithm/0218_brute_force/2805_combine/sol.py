@@ -9,4 +9,11 @@ sys.stdin = open('input.txt', 'r')
 T = int(input())   # Test case 개수를 받아오는 코드
 for tc in range(1, T+1):
     N = int(input())
-
+    arr = [list(input()) for _ in range(N)]
+    center = N//2
+    width, ans = 0, 0
+    for i in range(N):
+        for j in range(center-width, center+width+1):
+            ans += int(arr[i][j])
+        width += 1 if i < center else -1
+    print(f'#{tc}', ans)
