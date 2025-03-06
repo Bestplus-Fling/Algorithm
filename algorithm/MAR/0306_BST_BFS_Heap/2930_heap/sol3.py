@@ -1,29 +1,18 @@
 import sys
-sys.stdin = open('input.txt', 'r')
+sys.stdin = open('input3.txt', 'r')
 #####################################
 
 
 def sort_tree(root):
     l, r = root * 2, (root * 2) + 1
+    largest = root
 
-    # 조건 1. 자식 노드가 없으면 종료
-    if l >= len(deq) and r >= len(deq):
-        return
-
-    left = deq[l] if l < len(deq) else 0
-    right = deq[r] if r < len(deq) else 0
-
-    # 조건 2. 자식 노드가 있어도 자식들보다 현재 root 가 더 크면 종료
-    if deq[root] >= left and deq[root] >= right:
-        return
-
-    # 조건 3. 자식 노드보다 root 가 더 작다면 더 큰 쪽과 자리바꿈
-    if left >= right:
-        deq[root], deq[l] = deq[l], deq[root]
-        sort_tree(l)
-    else:
-        deq[root], deq[r] = deq[r], deq[root]
-        sort_tree(r)
+    if l < len(deq) and deq[l] > deq[largest]:
+        largest = l
+    if r < len(deq) and deq[r] > deq[largest]:
+        largest = r
+    if largest != root:
+        sort_tree(largest)
 
 
 def insert(idx):
@@ -44,25 +33,17 @@ T = int(input())
 for tc in range(1, T+1):
     N = int(input())
     inputs = [tuple(map(int, input().split())) for _ in range(N)]
-    # print(N)
     deq, ans = [0], []
     for i in range(N):
-        # print(deq)
         arr = inputs[i]
-        # 반환 명령이 있을 때
-        if arr[0] == 2:
-            # 길이가 1, 트리에 아무것도 없으면 -1 추가
-            if len(deq) == 1:
+        if arr[0] == 2:         # 반환 명령이 있을 때
+            if len(deq) == 1:   # 길이가 1, 트리에 아무것도 없으면 -1 추가
                 ans.append(-1)
                 continue
-            # 아니라면 root 를 출력 변수에 추가
-            ans.append(deq[1])
-            # 마지막 노드랑 root 랑 자리 교환
-            deq[1] = deq[-1]
-            # 마지막 노드(원래 root) 삭제
-            deq.pop()
-            # 삭제 후 root 의 max 를 보장
-            sort_tree(1)
+            ans.append(deq[1])  # 아니라면 root 를 출력 변수에 추가
+            deq[1] = deq[-1]    # 마지막 노드랑 root 랑 자리 교환
+            deq.pop()           # 마지막 노드(원래 root) 삭제
+            sort_tree(1)        # 삭제 후 root 의 max 를 보장
             continue
         # 노드를 추가해야 한다면 일단 추가
         deq.append(arr[1])
