@@ -11,7 +11,6 @@ def pre_order(node):
     for j in tree[node]:
         ans.append(j)
         pre_order(j)
-    pass
 
 
 # 정점의 총 수 V

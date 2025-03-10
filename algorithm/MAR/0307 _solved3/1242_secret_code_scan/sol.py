@@ -16,14 +16,14 @@ def cut_code():
     for row in code:
         temp = ''
         # print(len(row))
+        FLAG = False
         for i in range(M):
             # 문자열 형태로 입력받는 게 유리 temp += arr[i][j]
-            if row[i] == '0' and (i < M-1 and row[i+1] == '0'):
-                if temp:
-                    t_list.append(temp)
-                temp = ''
-                continue
-            temp += row[i]
+            if row[i] != '0':
+                FLAG = True
+            if FLAG:
+                temp += row[i]
+        t_list.append(temp)
 
 
 T = int(input())
