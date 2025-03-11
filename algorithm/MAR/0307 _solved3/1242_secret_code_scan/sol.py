@@ -15,41 +15,71 @@ case = {
 def cut_code():
     for row in code:
         temp = ''
-        # print(len(row))
         FLAG = False
-        for i in range(M):
+        ct = 0
+        for wd in row:
             # 문자열 형태로 입력받는 게 유리 temp += arr[i][j]
-            if row[i] != '0':
+            if wd != '0':
                 FLAG = True
             if FLAG:
-                temp += row[i]
-        t_list.append(temp)
+                temp += wd
+                if wd == '0':
+                    ct += 1
+                else:
+                    ct = 0
+                if ct == 2:
+                    FLAG = False
+                    t_list.append(temp)
+                    temp = ''
+                    ct = 0
+        if temp:
+            t_list.append(temp)
 
 
 T = int(input())
 for tc in range(1, T+1):
     N, M = map(int, input().split())
     code = [input() for _ in range(N)]
-    # 입력받은 배열을 순회 -> 0이 아닌 순간부터 0인 순간까지 확인
+
+    # 16진수의 숫자만을 저장한 후 중복 제거
     t_list = []
     cut_code()
+    print(set(t_list))
+    # 2진수로 변환된 자료형을 저장할 변수 선언
     bin_list = []
     ans = 0
-    print(set(t_list))
-    # 56의 배수가 될 때까지 temp = '0' + temp
+
+    # for loop 동작
+    """
+    1. 뒤에 붙은 0을 제거한다.
+    2. 2진수의 길이를 56의 배수에 맞추기 위해 0을 앞쪽에 추가한다.
+    3. 56의 배수를 저장한다.
+    4. 7자리씩 잘라서 확인
+    """
     for cd in set(t_list):
+
+        # 1번: 뒤에 붙은 0을 제거
+
         bin_num = list(bin(int(cd, 16))[2::])
+        if len(bin_num) < 30:
+            continue
+        # 1차적으로는 끝에 붙은 영을 제거한다.
         while True:
             if bin_num[-1] == '0':
                 bin_num.pop()
             else:
                 break
+
+        # 2번: 2진수 길이를 56의 배수로 맞춘다.
         bin_num = ''.join(bin_num)
+
         while len(bin_num) % 56 != 0:
             bin_num = '0' + bin_num
-        # temp 길이 % 56의 몫을 저장
+        print(bin_num, '\n', len(bin_num))
+        # 3번: 56의 몇배수인지 확인한다.
         bin_len = len(bin_num) // 56
-        # bin_num의 시작값을 저장하는 변수를 생성
+
+        # 4. 7자리씩 잘라서 확인한다.
         case_list = []
         for i in range(0, 56 * bin_len, 7 * bin_len):
             slice_bin = ''
@@ -67,24 +97,32 @@ for tc in range(1, T+1):
                     count_case = 1
                 if j == (bin_len * 7) - 1:
                     check.append(count_case // bin_len)
+            FLAG = False
+            for _ in check:
+                if _ > 4 or _ <= 0:
+                    FLAG = True
+                    break
+            if FLAG or len(check) != 4:
+                break
             # 값이 바뀌는 순간까지의 숫자를 비율로 저장= > tuple
             check = tuple(check[::])
+            # print(check)
             # 비율을 계산 -> dict에 등록된 숫자들로 가져오기
             case_list.append(case[check])
+        if not case_list:
+            break
         print(case_list)
         # 8개의 숫자를 순회하면서 홀수, 짝수, 검증용으로 분해
         odd, even, flag = 0, 0, 0
         for i in range(8):
             if i % 2 == 0:
                 odd += case_list[i]
-            elif i != 7:
-                even += case_list[i]
+            elif i == 7:
+                flag += case_list[i]
             else:
-                flag = case_list[i]
+                even += case_list[i]
         print((odd*3 + even + flag))
         if (odd*3 + even + flag) % 10 == 0:
-            ans = max((odd + even + flag), ans)
-        else:
-            ans = 0
+            ans += (odd + even + flag)
     print(f'#{tc}', ans)
 

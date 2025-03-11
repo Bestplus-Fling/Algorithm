@@ -14,13 +14,14 @@ def diamond(dx, dy, st, ed):
     count = 0
     for i in range(_len):
         x = dx + i
-        for j in range(st, ed):
-            y = dy + j
-            # 좌표가 음수일 경우도 있어서, 범위 안에 들어왔을 때랑,
-            # 집이 있을 때만 동작할 수 있도록 설정
-            if not (0 <= x < N and 0 <= y < N) or not town[x][y]:
-                continue
-            count += 1
+        if 0 <= x < N:
+            for j in range(st, ed):
+                y = dy + j
+                # 좌표가 음수일 경우도 있어서, 범위 안에 들어왔을 때랑,
+                # 집이 있을 때만 동작할 수 있도록 설정
+                if not (0 <= y < N) or not town[x][y]:
+                    continue
+                count += 1
         # 다이아몬드 크기 증가/감소
         if i < c:
             st -= 1
