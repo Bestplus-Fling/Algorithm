@@ -8,11 +8,11 @@ for tc in range(1, T+1):
 # 자 그러면 첫 풍선에 가루가 한개면 상하좌우로 한칸 n개면 n칸에 있는
 # 풍선안의 꽃가루의 개수를 세면 될듯
 
-    N, M = map(int,input().split())
-    my_list = [list(map(int,input().split())) for _ in range(N)]
+    N, M = map(int, input().split())
+    my_list = [list(map(int, input().split())) for _ in range(N)]
 
     max_num = 0
-    dxy = [[0, 1], [1, 0], [0, -1] , [-1, 0]]
+    dxy = [[0, 1], [1, 0], [0, -1], [-1, 0]]
 
     for i in range(N):
         for j in range(M):
