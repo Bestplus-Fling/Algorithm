@@ -29,12 +29,12 @@ def select_player(players):
         return players[data]
     # 종료조건이 아닐 경우: player를 분할해서 재귀 호출
     _len = len(players)
-    # print(players[:(_len+1) // 2])
+    print(players[:(_len+1) // 2])
     p1 = select_player(players[:(_len+1) // 2])
-    # print(p1)
-    # print(players[(_len+1) // 2:])
+    print(p1)
+    print(players[(_len+1) // 2:])
     p2 = select_player(players[(_len+1) // 2:])
-    # print(p2)
+    print(p2)
     if p1[1] == p2[1]:
         return p1
     return p2 if cases[(p1[1], p2[1])] else p1
