@@ -22,17 +22,17 @@ class Node:
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())
-    deq, ans = [0], []
+    deq, ans_a = [0], []
     arr = [list(map(int, input().split())) for _ in range(N)]
     for i in range(N):
         # 반환 명령이 있을 때
         if arr[i][0] == 2:
             # 길이가 1, 트리에 아무것도 없으면 -1 추가
             if len(deq) == 1:
-                ans.append(-1)
+                ans_a.append(-1)
                 break
             # 아니라면 root 를 출력 변수에 추가
-            ans.append(deq[1])
+            ans_a.append(deq[1])
             # 마지막 노드랑 root 랑 자리 교환
             deq[1] = deq[-1]
             # 마지막 노드(원래 root) 삭제
@@ -49,7 +49,7 @@ for tc in range(1, T+1):
             pass
             # insert(len(deq) - 1)
 
-    print(f'#{tc}', *ans)
+    print(f'#{tc}', *ans_a)
 # def sort_tree(root):
 #     l, r = root * 2, (root * 2) + 1
 #

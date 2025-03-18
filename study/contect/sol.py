@@ -36,7 +36,7 @@ for tc in range(1, T+1):
     bfs(S)
     res = sorted(res, reverse=True)
     # print(res)
-    ans = 0
+    ans_a = 0
     dp = 0
     # for i in range(100, 0, -1):
     #     if visited != -1 and dp < visited[i]:
@@ -44,6 +44,6 @@ for tc in range(1, T+1):
     #         dp = visited[i]
     for vtx in res:
         if dp < visited[vtx]:
-            ans = vtx
+            ans_a = vtx
             dp = visited[vtx]
-    print(f"#{tc}", ans)
+    print(f"#{tc}", ans_a)

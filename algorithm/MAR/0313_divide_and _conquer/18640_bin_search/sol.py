@@ -41,12 +41,12 @@ for tc in range(1, T+1):
     N, M = map(int, input().split())
     arr = list(map(int, input().split()))
     B = list((map(int, input().split())))
-    ans = 0
+    ans_a = 0
     arr.sort()
     for b in B:
         if div():
-            ans += 1
-    print(f'#{tc}', ans)
+            ans_a += 1
+    print(f'#{tc}', ans_a)
 
 """
 1. B에 속한 어떤 수가 A에 들어있으면서

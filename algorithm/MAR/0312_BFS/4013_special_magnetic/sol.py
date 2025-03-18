@@ -45,7 +45,7 @@ for tc in range(1, T+1):
     arr = [list(input().split()) for _ in range(4)]
     rot = [list(map(int, input().split())) for _ in range(K)]
     # pprint(arr)
-    ans = 0
+    ans_a = 0
     # s: 자석 번호 => s-1로 시작, cw => 회전방향
     for s, c in rot:
         idx = s-1
@@ -94,5 +94,5 @@ for tc in range(1, T+1):
 
     for j in range(4):
         if arr[j][0] == '1':
-            ans += 2 ** j
-    print(f'#{tc}', ans)
+            ans_a += 2 ** j
+    print(f'#{tc}', ans_a)

@@ -9,7 +9,7 @@ def pre_order(node):
         return
 
     for j in tree[node]:
-        ans.append(j)
+        ans_a.append(j)
         pre_order(j)
 
 
@@ -19,7 +19,7 @@ V = int(input())
 arr = list(map(int, input().split()))
 tree = {}
 # 답에 1을 미리 추가
-ans = [1]
+ans_a = [1]
 for i in range(0, len(arr), 2):
     # 부모 노드와 자식 노드를 입력
     parent, child = arr[i], arr[i + 1]
@@ -29,4 +29,4 @@ for i in range(0, len(arr), 2):
 # 전위 순회 함수 호출
 pre_order(1)
 # 출력
-print(*ans)
+print(*ans_a)

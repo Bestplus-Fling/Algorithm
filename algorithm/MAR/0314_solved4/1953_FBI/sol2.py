@@ -8,18 +8,20 @@ check = {
     (0, -1): [1, 3, 4, 5],
     (0, 1): [1, 3, 6, 7],
     (-1, 0): [1, 2, 5, 6],
-    (1, 0): [1, 2, 4, 7],
+    (1, 0): [1, 2, 4, 7]
 }
 
 
 def bfs(x, y):
+    global ans_a
     queue = deque([[x, y, 1]])
-
+    visited[x][y] = 1
     while queue:
         x, y, t = queue.popleft()
-        visited[x][y] = t
-        if t == L:
+        t += 1
+        if t > L:
             continue
+
         p = arr[x][y]
         for dx, dy in dxy:
             nx, ny = x + dx, y + dy
@@ -29,7 +31,9 @@ def bfs(x, y):
                 continue
             np = arr[nx][ny]
             if p in check[(-dx, -dy)] and np in check[(dx, dy)]:
-                queue.append([nx, ny, t+1])
+                queue.append([nx, ny, t])
+                visited[nx][ny] = t
+                ans += 1
 
 
 T = int(input())
@@ -37,8 +41,8 @@ for tc in range(1, T+1):
     N, M, R, C, L = map(int, input().split())
     arr = [list(map(int, input().split())) for _ in range(N)]
     visited = [[0] * M for _ in range(N)]
-    ans = 0
+    ans_a = 1
     bfs(R, C)
     for i in range(N):
-        ans += visited[i].count(0)
-    print(f'#{tc}', (N*M) - ans)
+        print(visited[i])
+    print(f'#{tc}', ans_a)

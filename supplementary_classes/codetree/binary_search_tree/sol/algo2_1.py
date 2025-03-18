@@ -12,7 +12,7 @@ a = list(map(int, input().split()))
 # 최초로 앉지 못하는 사람이 생기면 종료
 
 arr = [0] * (m+1)
-ans = 0
+ans_a = 0
 for i in range(n):
     if not arr[a[i]]:
         arr[a[i]] = 1
@@ -23,8 +23,8 @@ for i in range(n):
         if idx == 0:
             break
     if idx <= 0:
-        ans = i
+        ans_a = i
         break
     arr[idx] = 1
-print(ans)
+print(ans_a)
 

@@ -20,6 +20,7 @@ def delta(x, y):
             continue
         none_move = 4
         a.append((delta(nx, ny)))
+    print(a)
     if not a:
         return 1
     else:
@@ -36,10 +37,5 @@ for tc in range(1, T+1):
     for i in range(N):
         for j in range(N):
             max_cnt = max(max_cnt, delta(i, j)-1)
-            # for ux, uy in dxy:
-            #     ni = i + ux
-            #     nj = j + uy
-            #     if not (0 <= ni < N and 0 <= nj < N) or not(arr[i][j] < arr[ni][nj]):
-            #         continue
 
     print(f'#{tc} {max_cnt}')

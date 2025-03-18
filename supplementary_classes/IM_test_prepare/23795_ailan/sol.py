@@ -31,8 +31,8 @@ for tc in range(1, T+1):
     matrix = [list(map(int, input().split())) for _ in range(N)]
     # 레이저 범위를 확인
     search_alien()
-    ans = 0
+    ans_a = 0
     # 안전지대(0)의 개수를 확인, 출력
     for _ in range(N):
-        ans += matrix[_].count(0)
-    print(f'#{tc}', ans)
+        ans_a += matrix[_].count(0)
+    print(f'#{tc}', ans_a)

@@ -15,12 +15,12 @@ temp = [0] * (M+1)
 for i in range(N):
     dic[arr[i]] = dic.get(arr[i], 0) + 1
 print(dic)
-ans = 0
+ans_a = 0
 for i in range(N):
     idx = arr[i]
     if not temp[idx]:
         temp[idx] = 1
         dic[idx] -= 1
-        ans += 1
+        ans_a += 1
     else:
 

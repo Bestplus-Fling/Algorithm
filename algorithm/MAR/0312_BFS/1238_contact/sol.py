@@ -45,5 +45,5 @@ for tc in range(1, T+1):
         f, t = arr[i], arr[i + 1]
         graph[f].append(t)
     bfs()
-    ans = sorted(result, key=lambda x: (-x[1], -x[0]))
-    print(f'#{tc}', ans[0][0])
+    ans_a = sorted(result, key=lambda x: (-x[1], -x[0]))
+    print(f'#{tc}', ans_a[0][0])

@@ -4,7 +4,7 @@ sys.stdin = open('input.txt', 'r')
 
 
 def search(node):
-    global ans
+    global ans_a
     # 최하위 노드 check
     if node not in tree:
         ans += 1
@@ -28,7 +28,7 @@ for tc in range(1, T+1):
         parent, child = arr[i], arr[i+1]
         tree[parent] = tree.get(parent, []) + [child]
 
-    ans = 0
+    ans_a = 0
     search(N)
     # print(tree)
-    print(f"#{tc}", ans)
+    print(f"#{tc}", ans_a)

@@ -20,7 +20,7 @@ for tc in range(1, T+1):
         x, y, dist, e = map(int, input().split())
         x, y = x*2, y*2
         arr.append([y, x, dist, e])
-
+    result = 0
     for i in range(N):
         if vit[i]:
             continue
@@ -29,19 +29,10 @@ for tc in range(1, T+1):
             if j == i or vit[j]:
                 continue
             x2, y2, d2, e2 = arr[j]
-
+            #
             if direction[d1] == d2:
-                if d1 == 0 and x1 <= x2:
-                    pass
-                elif d1 == 1 and x1 >= x2:
-                    pass
-                elif d1 == 2 and y1 <= y2:
-                    pass
-                elif d1 == 3 and y1 >= y2:
-                    pass
-
-
-
-    print(arr)
-
-    break
+                if direction[d1] == d2 and (x1 <= x2 or x1 >= x2 or y1 <= y2 or y1 >= y2):
+                    result += e1 + e2
+                    vit[i], vit[j] = True, True
+                break
+    print(result)

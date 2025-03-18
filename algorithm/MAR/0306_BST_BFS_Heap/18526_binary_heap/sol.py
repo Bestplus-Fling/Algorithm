@@ -11,7 +11,7 @@ sys.stdin = open('input.txt', 'r')
 
 
 def travel(now):
-    global ans
+    global ans_a
     root = now // 2
     if root == 0:
         return
@@ -40,7 +40,7 @@ for tc in range(1, T+1):
         value.append(arr[i])
         if len(value) > 2:
             sort_tree(i+1)
-    ans = 0
+    ans_a = 0
     travel(N)
     # print(value)
-    print(f'#{tc}', ans)
+    print(f'#{tc}', ans_a)

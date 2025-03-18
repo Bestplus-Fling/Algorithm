@@ -5,7 +5,7 @@ sys.stdin = open('input.txt', 'r')
 # 전위 순회
 def pre_order(node):
     # 먼저 root를 추가
-    ans[0].append(node)
+    ans_a[0].append(node)
     # 최하위 노드라면 return
     if node not in tree:
         return
@@ -17,13 +17,13 @@ def pre_order(node):
 def in_order(node):
     # 최하위 노드인 경우 리스트에 추가, return
     if node not in tree:
-        ans[1].append(node)
+        ans_a[1].append(node)
         return
 
     # L 자식 call
     in_order(tree[node][0])
     # root 추가
-    ans[1].append(node)
+    ans_a[1].append(node)
     # R 자식이 있을 때만 call
     if len(tree[node]) > 1:
         in_order(tree[node][1])
@@ -32,14 +32,14 @@ def in_order(node):
 def post_order(node):
     # 최하위 노드인 경우 리스트에 추가, return
     if node not in tree:
-        ans[2].append(node)
+        ans_a[2].append(node)
         return
     # L -> R -> root 순으로 추가
     post_order(tree[node][0])
     # R 자식이 있을 때만 call
     if len(tree[node]) > 1:
         post_order(tree[node][1])
-    ans[2].append(node)
+    ans_a[2].append(node)
 
 
 # 정점의 총 수 V
@@ -48,7 +48,7 @@ V = int(input())
 arr = list(map(int, input().split()))
 tree = {}
 # 최종 출력을 저장하는 리스트 생성
-ans = [[] for _ in range(3)]
+ans_a = [[] for _ in range(3)]
 
 for i in range(0, len(arr), 2):
     # 부모 노드 번호와 자식 노드 번호를 입력받는다.
@@ -63,4 +63,4 @@ in_order(1)
 post_order(1)
 
 for i in range(3):
-    print(*ans[i])
+    print(*ans_a[i])

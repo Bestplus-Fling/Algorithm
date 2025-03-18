@@ -4,7 +4,7 @@ sys.stdin = open('input.txt', 'r')
 
 
 def check(node):
-    global ans
+    global ans_a
     # leaf node 를 만났을 때 node type 은 str 이므로 겹치지 않는다
     if node not in tree:
         # 합을 저장 후 return
@@ -32,6 +32,6 @@ for tc in range(1, T+1):
     for i in range(M):
         idx, num = input().split()
         tree[int(idx)] = [num]
-    ans = 0
+    ans_a = 0
     check(L)
-    print(f'#{tc}', ans)
+    print(f'#{tc}', ans_a)

@@ -48,7 +48,7 @@ for tc in range(1, T+1):
     N = int(input())
     arr = [list(input().strip()) for _ in range(N)]
     vit = [[False] * N for _ in range(N)]
-    ans = 0
+    ans_a = 0
     z_queue = deque()
     for i in range(N):
         for j in range(N):
@@ -63,10 +63,10 @@ for tc in range(1, T+1):
         if vit[lx][ly]:
             continue
         bfs(lx, ly)
-        ans += 1
+        ans_a += 1
 
     for i in range(N):
         for j in range(N):
             if arr[i][j] != '*' and not vit[i][j]:
-                ans += 1
-    print(f'#{tc}', ans)
+                ans_a += 1
+    print(f'#{tc}', ans_a)

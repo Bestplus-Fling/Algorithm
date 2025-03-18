@@ -22,36 +22,54 @@ sys.stdin = open('input.txt', 'r')
 #####################################
 dxy = [1, 0], [0, -1], [-1, 0], [0, 1]
 check = {
-    (-1, 0): [1, 2, 5, 6],
-    (1, 0): [1, 2, 4, 7],
     (0, -1): [1, 3, 4, 5],
     (0, 1): [1, 3, 6, 7],
+    (-1, 0): [1, 2, 5, 6],
+    (1, 0): [1, 2, 4, 7]
 }
 
 
-def delta(x, y, time):
-    visited[x][y] = time
-    if time == L:
-        return
-    pipe = arr[x][y]
-    for dx, dy in dxy:
-        nx, ny = x + dx, y + dy
-        if not(0 <= nx < N and 0 <= ny < M) or arr[nx][ny] == 0:
+def delta(x, y):
+    global ans_a
+    stack = [[x, y, 1]]
+    while stack:
+        # print(stack)
+        x, y, time = stack[-1]
+        time += 1
+        if time > L:
+            stack.pop()
             continue
-        if visited[nx][ny]:
-            continue
-        nxt_pipe = arr[nx][ny]
-        if pipe in check[(-dx, -dy)] and nxt_pipe in check[(dx, dy)]:
-            delta(nx, ny, time + 1)
+        pipe = arr[x][y]
+        for dx, dy in dxy:
+            nx, ny = x + dx, y + dy
+            if not(0 <= nx < N and 0 <= ny < M) or not arr[nx][ny]:
+                continue
+            if visited[nx][ny]:
+                continue
+            nxt_pipe = arr[nx][ny]
+            if pipe in check[(-dx, -dy)] and nxt_pipe in check[(dx, dy)]:
+                stack.append([nx, ny, time])
+                visited[nx][ny] = time
+                ans += 1
+                break
+        else:
+            stack.pop()
+
+
+
 
 
 T = int(input())
 for tc in range(1, T+1):
     N, M, R, C, L = map(int, input().split())
     arr = [list(map(int, input().split())) for _ in range(N)]
-    ans = 0
+    ans_a = 1
     visited = [[0] * M for _ in range(N)]
-    delta(R, C, 1)
+    visited[R][C] = 1
+    delta(R, C)
+    c = 0
     for i in range(N):
-        ans += visited[i].count(0)
-    print(f'#{tc}', (N*M) - ans)
+        c += visited[i].count(0)
+        print(visited[i])
+    print(f'#{tc}', ans_a)
+    print((N*M) - c)

@@ -41,7 +41,7 @@ for tc in range(1, T+1):
     N = int(input())
     arr = [list(input().strip()) for _ in range(N)]
     visited = [[False] * N for _ in range(N)]
-    ans = 0
+    ans_a = 0
     queue = deque()
     for i in range(N):
         for j in range(N):
@@ -55,8 +55,8 @@ for tc in range(1, T+1):
         lx, ly = queue.popleft()
         if visited[lx][ly]:
             continue
-        ans += 1
+        ans_a += 1
         bfs(lx, ly)
     for i in range(N):
-        ans += visited[i].count(False)
-    print(f'#{tc}', ans)
+        ans_a += visited[i].count(False)
+    print(f'#{tc}', ans_a)

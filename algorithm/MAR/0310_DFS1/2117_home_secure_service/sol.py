@@ -36,7 +36,7 @@ T = int(input())
 for tc in range(1, T+1):
     N, M = map(int, input().split())
     town = [list(map(int, input().split())) for _ in range(N)]
-    ans = 0
+    ans_a = 0
     house = 0
     for a in range(N):
         house += town[a].count(1)
@@ -62,6 +62,6 @@ for tc in range(1, T+1):
                 1. 현재 ans에 저장된 주택 수보다 temp가 더 많을 때
                 2. 서비스 이용료가 수익보다 많은 시점(=손해가 아닐 때)
                 """
-                if temp > ans and cost-payment >= 0:
-                    ans = temp
-    print(f'#{tc}', ans)
+                if temp > ans_a and cost-payment >= 0:
+                    ans_a = temp
+    print(f'#{tc}', ans_a)

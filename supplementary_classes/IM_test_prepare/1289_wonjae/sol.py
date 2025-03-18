@@ -13,10 +13,10 @@ T = int(input())  # Test case 개수를 받아오는 코드
 for tc in range(1, T + 1):
     bit = input()
     check_bit = 0
-    ans = 0
+    ans_a = 0
     for num in bit:
         if int(num) != check_bit:
             check_bit = 1 - check_bit
-            ans += 1
+            ans_a += 1
 
-    print(f'#{tc}' ,ans)
+    print(f'#{tc}', ans_a)

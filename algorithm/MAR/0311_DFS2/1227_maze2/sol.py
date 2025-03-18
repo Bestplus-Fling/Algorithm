@@ -15,7 +15,7 @@ for tc in range(1, T+1):
     # 시작 지점은 항상 2,2
     x, y = 2, 2
     stack = [(2, 2)]
-    ans = 0
+    ans_a = 0
     # 스택의 모든 데이터가 빠져나간 순간 => 완탐 끝
     while stack:
         # 방문처리
@@ -26,7 +26,7 @@ for tc in range(1, T+1):
             if not (0 <= nx < N and 0 <= ny < N) or maze[nx][ny] == 1 or visited[nx][ny]:
                 continue
             if maze[nx][ny] == 3:
-                ans = 1
+                ans_a = 1
                 break
             # 재귀함수랑 달라지는 부분 => while로 재귀함수를 구현하기 위한 조건
             # - 스택 관리(재귀 함수 = 스택), 항상 다음 좌표로 넘어가기 전, 현재 좌표를 저장한다.
@@ -39,10 +39,10 @@ for tc in range(1, T+1):
             # 더 이상의 델타탐색을 종료 => 갱신한 좌표에서의 탐색을 진행하게 된다.
         # 델타 탐색의 정상 종료: 모든 방향에서 해를 찾지 못했다.
             # 현재 좌표로 이동하기 전의 좌표로 돌아간다.
-        if ans:
+        if ans_a:
             break
 
         # 해를 찾은 경우 while문을 종료한다.
         # 해를 찾지 못한다면 while문은 stack의 모든 데이터가 사라질때까지 동작할 것이다.
 
-    print(f'#{t}', ans)
+    print(f'#{t}', ans_a)

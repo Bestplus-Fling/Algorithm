@@ -10,22 +10,22 @@ T = int(input())
 for tc in range(1, T+1):
     N = int(input())
     # 입력이 0인 경우는 없으니까 무조건 1추가하고 시작
-    ans = [[1]]
+    ans_a = [[1]]
     for i in range(N-1):
         # i + 2 만큼의 길이를 가진다.
         arr = [0] * (i + 2)
         for j in range(len(arr)):
             # 오른쪽 대각선 있으면 추가
-            if j < len(ans[i]):
-                arr[j] = ans[i][j]
+            if j < len(ans_a[i]):
+                arr[j] = ans_a[i][j]
             # 왼쪽 대각선이 있으면 추가 (그냥 1로 바뀜)
             if j-1 >= 0:
-                arr[j] += ans[i][j-1]
+                arr[j] += ans_a[i][j - 1]
         # 한 줄 완성할때마다 ans에 추가
-        ans.append(arr)
+        ans_a.append(arr)
     print(f'#{tc}')
     # 출력
-    for i in ans:
+    for i in ans_a:
         print(*i)
 
 

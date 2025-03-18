@@ -23,9 +23,9 @@ for tc in range(1, T+1):
     students = [tuple(map(int, input().split())) for _ in range(N)]
     # print(students)
     visited = [False] * 400
-    ans = 1
+    ans_a = 1
     for student in students:
         if check(student[0], student[1]):
-            ans += 1
+            ans_a += 1
 
-    print(f'#{tc}', ans)
+    print(f'#{tc}', ans_a)

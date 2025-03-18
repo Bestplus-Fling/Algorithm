@@ -4,7 +4,7 @@ sys.stdin = open('input.txt', 'r')
 
 
 def divide(dl):
-    global ans
+    global ans_a
     # 좌우 분할값이 1일 때 반환 후 merge 실행
     n = len(dl)
     if n == 1:
@@ -42,8 +42,8 @@ T = int(input())
 for tc in range(1, T+1):
     N = int(input())
     arr = list(map(int, input().split()))
-    ans = 0
+    ans_a = 0
     # 분할 방법: [:N//2], [N//2:]
     al = divide(arr)
-    print(f'#{tc}', al[N//2], ans)
+    print(f'#{tc}', al[N//2], ans_a)
 

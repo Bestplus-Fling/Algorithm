@@ -8,7 +8,7 @@ for _ in range(N):
     # candy.append((c, p))
     counting_array[p] += c
 
-ans = 0
+ans_a = 0
 # 중심을 각 지점에 위치시킨다.
 for center in range(K, 100-K):
     # 해당 중심에 대해서 -K ~ +K 위치의 바구니를 탐색
@@ -23,6 +23,6 @@ for center in range(K, 100-K):
         #     if pos == target:
         #         result += cnt
         result += counting_array[target]
-    ans = max(result, ans)
+    ans_a = max(result, ans_a)
 
-print(ans)
+print(ans_a)

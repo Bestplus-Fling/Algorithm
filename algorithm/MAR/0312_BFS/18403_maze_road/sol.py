@@ -6,7 +6,7 @@ dxy = [1, 0], [0, -1], [-1, 0], [0, 1]
 
 
 def bfs(r, o, h):
-    global ans
+    global ans_a
     queue = deque()
     queue.append((r, o, h))
 
@@ -28,9 +28,9 @@ T = int(input())
 for tc in range(1, T+1):
     N = int(input())
     arr = [list(input().strip()) for _ in range(N)]
-    ans = 0
+    ans_a = 0
     for i in range(N):
         for j in range(N):
             if arr[i][j] == '2':
                 bfs(i, j, 0)
-    print(f'#{tc}', ans)
+    print(f'#{tc}', ans_a)

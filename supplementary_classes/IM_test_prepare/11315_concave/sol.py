@@ -15,7 +15,7 @@ for tc in range(1, T+1):
     N = int(input())
     matrix = [input() for _ in range(N)]
     # 오목의 참 거짓을 판별
-    ans = False
+    ans_a = False
 
     for i in range(N):
         # 행, 열의 연속된 돌의 개수를 확인
@@ -37,9 +37,9 @@ for tc in range(1, T+1):
                 dag4 += 1 if matrix[i+j][N-1-j] == 'o' else -dag4
             # 중간에 연속된 돌의 개수가 5를 초과하면 바로 for문 탈출
             if row >= 5 or col >= 5 or dag1 >= 5 or dag2 >= 5 or dag3 >= 5 or dag4 >= 5:
-                ans = True
+                ans_a = True
                 break
-        if ans:
+        if ans_a:
             break
 
-    print(f'#{tc}', 'YES' if ans else 'NO')
+    print(f'#{tc}', 'YES' if ans_a else 'NO')

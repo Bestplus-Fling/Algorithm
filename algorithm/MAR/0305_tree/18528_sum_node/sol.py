@@ -4,7 +4,7 @@ sys.stdin = open('input.txt', 'r')
 
 
 def search(node):
-    global ans
+    global ans_a
     if node not in tree:
         ans += node
         return
@@ -29,7 +29,7 @@ for tc in range(1, T+1):
         idx, num = input().split()
         tree[idx] = [int(num)]
     # print(tree)
-    ans = 0
+    ans_a = 0
     search(str(L))
-    print(f'#{tc}', ans)
+    print(f'#{tc}', ans_a)
 

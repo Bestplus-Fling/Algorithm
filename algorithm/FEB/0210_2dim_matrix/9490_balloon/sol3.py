@@ -19,8 +19,8 @@ T = int(input())   # Test case 개수를 받아오는 코드
 for tc in range(1, T+1):
     N, M = map(int, input().split())
     arr = [list(map(int, input().split())) for _ in range(N)]
-    ans = 0
+    ans_a = 0
     for i in range(N):
         for j in range(M):
-            ans = max(delta(i, j), ans)
-    print(f'#{tc}', ans)
+            ans_a = max(delta(i, j), ans_a)
+    print(f'#{tc}', ans_a)

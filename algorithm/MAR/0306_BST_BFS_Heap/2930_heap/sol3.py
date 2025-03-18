@@ -33,14 +33,14 @@ T = int(input())
 for tc in range(1, T+1):
     N = int(input())
     inputs = [tuple(map(int, input().split())) for _ in range(N)]
-    deq, ans = [0], []
+    deq, ans_a = [0], []
     for i in range(N):
         arr = inputs[i]
         if arr[0] == 2:         # 반환 명령이 있을 때
             if len(deq) == 1:   # 길이가 1, 트리에 아무것도 없으면 -1 추가
-                ans.append(-1)
+                ans_a.append(-1)
                 continue
-            ans.append(deq[1])  # 아니라면 root 를 출력 변수에 추가
+            ans_a.append(deq[1])  # 아니라면 root 를 출력 변수에 추가
             deq[1] = deq[-1]    # 마지막 노드랑 root 랑 자리 교환
             deq.pop()           # 마지막 노드(원래 root) 삭제
             sort_tree(1)        # 삭제 후 root 의 max 를 보장
@@ -51,4 +51,4 @@ for tc in range(1, T+1):
         if len(deq) > 2:
             insert(len(deq) - 1)
 
-    print(f'#{tc}', *ans)
+    print(f'#{tc}', *ans_a)

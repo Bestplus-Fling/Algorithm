@@ -7,7 +7,7 @@ def search(node):
     # 노드의 value가 글자만 들어있는 경우
     if len(tree[node]) == 1:
         # 출력 변수에 저장
-        ans.extend(tree.get(node))
+        ans_a.extend(tree.get(node))
         return
     # 노드의 value 길이가 2 이상인 경우 리스트를 순회
     for n in tree[node]:
@@ -16,7 +16,7 @@ def search(node):
             search(n)
         # 아닐 경우 중위순회로 글자를 추가
         else:
-            ans.append(n)
+            ans_a.append(n)
     return
 
 
@@ -25,7 +25,7 @@ for tc in range(1, T+1):
     # 노드의 수
     N = int(input())
     tree = {}
-    ans = []
+    ans_a = []
     for i in range(N):
         # 노드의 번호와 나머지를 입력
         idx, *temp = input().split()
@@ -38,4 +38,4 @@ for tc in range(1, T+1):
         tree[idx] = temp
     # 함수 호출
     search('1')
-    print(f'#{tc}', ''.join(ans))
+    print(f'#{tc}', ''.join(ans_a))

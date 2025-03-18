@@ -10,7 +10,7 @@ def sort_tree(idx):
 T = int(input())
 for tc in range(1, T+1):
     N = int(input())
-    ans, que = [], []
+    ans_a, que = [], []
     for i in range(N):
         tpl = tuple(map(int, input().split()))
         # print(que)
@@ -29,8 +29,8 @@ for tc in range(1, T+1):
             continue
         # 삭제 조건
         if not que:
-            ans.append(-1)
+            ans_a.append(-1)
             break
-        ans.append(que.pop())
-    print(f'#{tc}', *ans)
+        ans_a.append(que.pop())
+    print(f'#{tc}', *ans_a)
 

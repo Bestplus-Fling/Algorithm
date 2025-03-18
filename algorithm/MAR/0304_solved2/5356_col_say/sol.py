@@ -7,7 +7,7 @@ for tc in range(1, T+1):
     N = 5
     arr = [list(input()) for _ in range(N)]
     _len = 0
-    ans = ''
+    ans_a = ''
     for _ in range(N):
         _len = max(_len, len(arr[_]))
 
@@ -15,5 +15,5 @@ for tc in range(1, T+1):
         for j in range(N):
             if len(arr[j]) <= i:
                 continue
-            ans += arr[j][i]
-    print(f'#{tc}', ans)
+            ans_a += arr[j][i]
+    print(f'#{tc}', ans_a)

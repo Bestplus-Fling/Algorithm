@@ -36,7 +36,7 @@ for tc in range(1, T+1):
         tree.setdefault(parent, []).append(child)
 
     # 가장 가까운 공통 조상 노드 번호, 서브트리의 크기 저장
-    ans, count = 0, float('inf')
+    ans_a, count = 0, float('inf')
     for i in range(1, V+1):
         # print(i)
         # 서브트리 크기 임시 저장, 공통 조상을 찾았을 때의 flag
@@ -44,7 +44,7 @@ for tc in range(1, T+1):
         search(i)
         # 공통 조상을 찾았고, 서브트리 크기가 가장 작다는게 가장 가까운 조상이라는 의미
         if flag == 2 and count > temp:
-            ans = i
+            ans_a = i
             count = temp
 
-    print(f'#{tc}', ans, count)
+    print(f'#{tc}', ans_a, count)

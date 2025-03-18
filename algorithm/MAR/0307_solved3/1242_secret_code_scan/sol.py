@@ -52,7 +52,7 @@ for tc in range(1, T+1):
         continue
     # 2진수로 변환된 자료형을 저장할 변수 선언
     bin_list = []
-    ans = 0
+    ans_a = 0
     # for loop 동작
     """
     1. 뒤에 붙은 0을 제거한다.
@@ -129,6 +129,6 @@ for tc in range(1, T+1):
                 even += case_list[i]
         print((odd*3 + even + flag))
         if (odd*3 + even + flag) % 10 == 0:
-            ans += (odd + even + flag)
-    print(f'#{tc}', ans)
+            ans_a += (odd + even + flag)
+    print(f'#{tc}', ans_a)
 
