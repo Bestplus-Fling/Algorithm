@@ -6,10 +6,10 @@ pay = 1000 - int(sys.stdin.readline())
 idx, ans = 0, 0
 
 while idx < 6:
-    cnt = pay // coin[idx]
-    if cnt == 0:
+    ans = pay // coin[idx]
+    if ans == 0:
         idx += 1
         continue
-    pay -= coin[idx] * cnt
-    ans += cnt
+    pay -= coin[idx] * ans
+    ans += ans
 print(ans)

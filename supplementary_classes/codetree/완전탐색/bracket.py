@@ -4,7 +4,7 @@ A = input()
 # 4개의 문자를 선택하여
 # (()) 인지 확인
 # => 100 C 4
-cnt = 0
+ans = 0
 for i1 in range(len(A)):
     for i2 in range(i1+1, len(A)):
         for i3 in range(i2+1, len(A)):
@@ -13,9 +13,9 @@ for i1 in range(len(A)):
                 # 이때, 4개의 문자가 (()) 인지 확인해서 맞다면 counting
                 if i1 + 1 == i2 and i3 + 1 == i4:
                     if A[i1] == '(' and A[i2] == '(' and A[i3] == ')' and A[i4] == ')':
-                        cnt += 1
+                        ans += 1
 
-print(cnt)
+print(ans)
 
 
 # for i1 in range(len(A)):

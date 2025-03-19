@@ -8,9 +8,9 @@ for tc in range(1, T+1):
     arr = list(map(int, input().split()))
     _list = []
     for i in range(N):
-        cnt = 0
+        ans = 0
         for j in range(i+1, N):
             if arr[i] <= arr[j]:
-                cnt += 1
-        _list.append(N-cnt-i-1)
+                ans += 1
+        _list.append(N - ans - i - 1)
     print(f'#{tc} {max(_list)}')

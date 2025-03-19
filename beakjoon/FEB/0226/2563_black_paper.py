@@ -6,7 +6,7 @@
 
 N = int(input())
 paper = [[0] * 100 for _ in range(100)]
-cnt = 0
+ans = 0
 for k in range(N):
     x, y = map(int, input().split())
     for i in range(y, y+10):
@@ -14,5 +14,5 @@ for k in range(N):
             if paper[i][j]:
                 continue
             paper[i][j] += 1
-            cnt += 1
-print(cnt)
+            ans += 1
+print(ans)

@@ -12,17 +12,17 @@ for tc in range(1, T + 1):
     # 가로 순회
     for row in puzzle:
         # 1의 개수 확인
-        cnt = 0
+        ans = 0
         # 순회하고 있는 가로에 1의 개수가 K개 만큼 있을 때
         if row.count(1) >= K:
             # 행 내부를 순회
             for i in range(N):
                 # 행에 1이 있을 때마다 cnt++
                 if row[i] == 1:
-                    cnt += 1
+                    ans += 1
                 # 0을 만나면 cnt 초기화
                 else:
-                    cnt = 0
+                    ans = 0
                 '''
                 조건1: 1의 개수가 K개만큼 있다 그리고(and)
                 조건2-1: 인덱스가 종점에 위치했거나(or)
@@ -37,25 +37,25 @@ for tc in range(1, T + 1):
                 인덱스의 순회가 끝나서 다음칸이 없을 경우(out of range) 
                 정상적으로 cnt된거니까 check++
                 '''
-                if cnt == K and (i == N - 1 or (i + 1 < N and row[i + 1] == 0)):
+                if ans == K and (i == N - 1 or (i + 1 < N and row[i + 1] == 0)):
                     check += 1
-                    cnt = 0
+                    ans = 0
                     continue
             # 행과 동일한 형태, 열을 확인하기 위해 리스트를 새로 생성해서 순회
     for j in range(N):
         col = []
         for _ in range(N):
             col.append(puzzle[_][j])
-        cnt = 0
+        ans = 0
 
         if col.count(1) >= K:
             for i in range(N):
                 if col[i] == 1:
-                    cnt += 1
+                    ans += 1
                 else:
-                    cnt = 0
-                if cnt == K and (i == N - 1 or (i + 1 < N and col[i + 1] == 0)):
+                    ans = 0
+                if ans == K and (i == N - 1 or (i + 1 < N and col[i + 1] == 0)):
                     check += 1
-                    cnt = 0
+                    ans = 0
                     continue
     print(f'#{tc} {check}')

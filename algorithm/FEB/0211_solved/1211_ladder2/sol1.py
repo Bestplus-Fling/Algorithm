@@ -33,9 +33,9 @@ for tc in range(1, T+1):
     for _ in range(M):
         if ladder[0][_] == 0:
             continue
-        cnt = ladder_search(_)
-        if min_way > cnt:
-            min_way = cnt
+        ans = ladder_search(_)
+        if min_way > ans:
+            min_way = ans
             idx = _
     print(f'#{N} {idx}')
 

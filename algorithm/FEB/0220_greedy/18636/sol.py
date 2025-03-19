@@ -13,7 +13,7 @@ for tc in range(1, T+1):
     N = int(input())
     # 도크 사용 종료 시점을 기준으로 오름차순 정렬
     timeline = sorted([tuple(map(int, input().split())) for _ in range(N)], key=lambda tpl: tpl[1])
-    t, idx, cnt = 0, 0, 0
+    t, idx, ans = 0, 0, 0
     # 24시를 넘어가거나 모든 사용신청 내역을 확인하면 while 문 종료
     while t <= 24:
         if idx == N:
@@ -21,7 +21,7 @@ for tc in range(1, T+1):
         # 현재 시간을 기준으로 사용신청한 내용이 있다면
         if timeline[idx][0] == t:
             # count / 시간을 도크 사용 종료 시점으로 갱신 / 다음 신청내용을 확인
-            cnt += 1
+            ans += 1
             t = timeline[idx][1]
             idx += 1
             continue
@@ -33,4 +33,4 @@ for tc in range(1, T+1):
         # 1. 도크 사용 후
         # 2. 지금 시간이 현재 확인중인 신청 내역의 시작시간에 미치지 못했을 때
         t += 1
-    print(f'#{tc}', cnt)
+    print(f'#{tc}', ans)

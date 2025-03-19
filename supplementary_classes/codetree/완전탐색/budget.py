@@ -10,14 +10,14 @@ for discount in range(N):
     new_P = sorted(P[:])    # 복사
 
     # 예산 안에서 선물 가능한 최대 인원 구하기(Greedy)
-    total, cnt = 0, 0
+    total, ans = 0, 0
     for money in new_P:
         if total + money <= B:
             total += money
-            cnt += 1
+            ans += 1
         else:
             break
-    ans_a = max(ans_a, cnt)
+    ans_a = max(ans_a, ans)
 
     # 할일했을 걸 원상복구
     P[discount] *= 2

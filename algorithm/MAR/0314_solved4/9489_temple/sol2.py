@@ -9,20 +9,20 @@ for tc in range(1, T+1):
     result = 0
     for i in range(N):
         arr.append(input().split())
-        cnt = 0
+        ans = 0
         for j in range(M):
             if arr[i][j] == '1':
-                cnt += 1
-            if (arr[i][j] == '0' or j == M-1) and cnt:
-                result = max(cnt, result)
-                cnt = 0
+                ans += 1
+            if (arr[i][j] == '0' or j == M-1) and ans:
+                result = max(ans, result)
+                ans = 0
 
     for j in range(M):
-        cnt = 0
+        ans = 0
         for i in range(N):
             if arr[i][j] == '1':
-                cnt += 1
-            if (arr[i][j] == '0' or i == N-1) and cnt:
-                result = max(cnt, result)
-                cnt = 0
+                ans += 1
+            if (arr[i][j] == '0' or i == N-1) and ans:
+                result = max(ans, result)
+                ans = 0
     print(f'#{tc}', result)
