@@ -6,6 +6,8 @@ arr = [list(sys.stdin.readline().split()) for _ in range(N)]
 tx, bx, ty, by = 0, N, 0, M
 t = 0
 while tx < bx and ty < by:
+    # 바깥 길이를 계산해서 r // 배열이 한바퀴 도는 데 걸리는 횟수
+    # 이걸로 while문 순회
     cnt = 0
     while R != cnt:
         a, b, c, d = [], [], [], []
