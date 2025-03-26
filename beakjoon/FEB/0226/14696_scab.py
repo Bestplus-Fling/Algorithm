@@ -18,8 +18,8 @@ N = int(input())
 
 for i in range(N):
     a, *ai = map(int, input().split())
-    b, *bi = map(int, input().split())
-    if a == b:
+    c, *bi = map(int, input().split())
+    if a == c:
         au, bu = sorted(ai), sorted(bi)
         if au == bu:
             print('D')

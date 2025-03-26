@@ -18,8 +18,8 @@ a = sorted(list(map(int, input().split())))
 for i in a:
     dic[i] += 1
 M = int(input())
-b = list(map(int, input().split()))
+c = list(map(int, input().split()))
 ans = []
-for j in b:
+for j in c:
     ans.append(dic[j])
 print(*ans)

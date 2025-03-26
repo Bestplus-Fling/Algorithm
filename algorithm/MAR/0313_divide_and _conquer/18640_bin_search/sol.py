@@ -21,9 +21,9 @@ def div():
     c = 0
     while l <= r:
         m = (l+r) // 2
-        if arr[m] == b:
+        if arr[m] == c:
             return 1
-        if arr[m] > b:
+        if arr[m] > c:
             r = m - 1
             if c == -1:
                 return 0
@@ -43,7 +43,7 @@ for tc in range(1, T+1):
     B = list((map(int, input().split())))
     ans_a = 0
     arr.sort()
-    for b in B:
+    for c in B:
         if div():
             ans_a += 1
     print(f'#{tc}', ans_a)

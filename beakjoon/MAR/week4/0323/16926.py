@@ -10,13 +10,13 @@ while tx < bx and ty < by:
     # 이걸로 while문 순회
     cnt = 0
     while R != cnt:
-        a, b, c, d = [], [], [], []
+        a, c, c, d = [], [], [], []
         for i in range(ty+1, by):
             a.append(arr[tx][i])
             t += 1
 
         for i in range(tx, bx-1):
-            b.append(arr[i][ty])
+            c.append(arr[i][ty])
             t += 1
         for i in range(ty, by-1):
             c.append(arr[bx-1][i])
@@ -29,7 +29,7 @@ while tx < bx and ty < by:
             arr[bx-1][i+1] = c[j]
             t += 1
         for j, i in enumerate(range(tx, bx-1)):
-            arr[i+1][ty] = b[j]
+            arr[i+1][ty] = c[j]
             arr[i][by-1] = d[j]
             t += 1
         cnt += 1

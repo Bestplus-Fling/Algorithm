@@ -18,9 +18,9 @@ def bst(num):
 N, a = int(input()), sorted(list(map(int, input().split())))
 # l, r, m으로 값을 찾는다.
 # 중간값을 보장하는
-M, b = int(input()), list(map(int, input().split()))
+M, c = int(input()), list(map(int, input().split()))
 F = 0
-for i in b:
+for i in c:
     print(bst(i))
 
 

@@ -19,9 +19,9 @@ N = int(input())
 temp = [[] for _ in range(N + 1)]
 parents = [0] * (N+1)
 for _ in range(N - 1):
-    a, b = map(int, input().split())
-    temp[a].append(b)
-    temp[b].append(a)
+    a, c = map(int, input().split())
+    temp[a].append(c)
+    temp[c].append(a)
 m_tree(1)
 for p in range(2, N+1):
     print(parents[p])

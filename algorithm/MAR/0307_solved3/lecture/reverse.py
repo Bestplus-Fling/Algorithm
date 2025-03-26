@@ -1,6 +1,6 @@
 a = 123456789
-b = []
+c = []
 while a != 0:
-    b.append(str(a % 10))
+    c.append(str(a % 10))
     a = a // 10
-print(''.join(b))
+print(''.join(c))

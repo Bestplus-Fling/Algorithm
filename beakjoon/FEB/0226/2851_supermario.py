@@ -6,6 +6,6 @@ for i in range(10):
     temp += N
 
 a = 100 - temp
-b = temp+N - 100
-print(temp+N if a == b or a > b else temp)
+c = temp + N - 100
+print(temp+N if a == c or a > c else temp)
 

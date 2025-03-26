@@ -35,9 +35,9 @@ def dfs(vtx=1):
 N = int(input())
 graph = [[] for _ in range(N+1)]
 for i in range(int(input())):
-    a, b = map(int, input().split())
-    graph[a].append(b)
-    graph[b].append(a)
+    a, c = map(int, input().split())
+    graph[a].append(c)
+    graph[c].append(a)
 visited_a = [0] * (N + 1)
 visited_b = [0] * (N + 1)
 ans_a, ans_b = 0, 0
