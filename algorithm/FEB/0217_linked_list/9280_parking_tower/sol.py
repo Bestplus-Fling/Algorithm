@@ -1,18 +1,52 @@
 import sys
 sys.stdin = open('input.txt', 'r')
 #########################################
+from collections import deque
 
 T = int(input())   # Test case 개수를 받아오는 코드
 for tc in range(1, T+1):
     N, M = map(int, input().split())
     # 주차 위치별 요금
-    payment = [(_+1, int(input())) for _ in range(N)]
+    parking_area = [[_ + 1, int(input()), 0] for _ in range(N)]
     # 차량 별 무게
     car_weight = [int(input()) for _ in range(M)]
-    # 입출차 기록 확인
-    in_output = [int(input()) for _ in range(M * 2)]
-    print(payment, car_weight, in_output)
-    break
+    wait, is_parking = deque(), 0
+    ans = 0
+    locate = [None] * M
+    for i in range(M*2):
+        inout = int(input())
+        # 입차
+        if inout > 0:
+            if is_parking == N:
+                wait.append(inout)
+                continue
+            for j in range(N):
+                if parking_area[j][2] == 0:
+                    # 가장 앞에 있는 자리에 매칭해준다
+                    parking_area[j][2] = inout
+                    locate[inout-1] = j
+                    is_parking += 1
+                    break
+
+        # 출차
+        elif inout < 0:
+            # 요금을 계산한다.
+            inout = abs(inout)-1
+            loc = locate[inout]
+            parking_area[loc][2]
+            is_parking -= 1
+            parking_area[loc][2] = 0
+            ans += parking_area[loc][1] * car_weight[inout]
+
+            # 기다리던 차량이 있다면 우선 입차
+            if wait:
+                temp = wait.popleft()
+                parking_area[loc][2] = temp
+                locate[temp-1] = loc
+                is_parking += 1
+    print(f'#{tc}', ans)
+
+
 """
 주차 공간 중 번호가 가장 작은 주차공간에 주차하도록 한다.
 만약 주차를 기다리는 차량이 여러 대라면, 입구의 대기 장소에서 자기 차례를 기다려야 한다(선입선출)

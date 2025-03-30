@@ -9,7 +9,7 @@ sys.stdin = open('input.txt', 'r')
 이때 방출하는 에너지의 총합을 구한다.
 """
 
-direction = {0: 1, 1: 0, 2: 3, 3: 2}
+d = {0: 1, 1: 0, 2: 3, 3: 2}
 
 T = int(input())
 for tc in range(1, T+1):
@@ -30,8 +30,8 @@ for tc in range(1, T+1):
                 continue
             x2, y2, d2, e2 = arr[j]
             #
-            if direction[d1] == d2:
-                if direction[d1] == d2 and (x1 <= x2 or x1 >= x2 or y1 <= y2 or y1 >= y2):
+            if d[d1] == d2:
+                if d[d1] == d2 and (x1 <= x2 or x1 >= x2 or y1 <= y2 or y1 >= y2):
                     result += e1 + e2
                     vit[i], vit[j] = True, True
                 break
