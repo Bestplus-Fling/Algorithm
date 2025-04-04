@@ -29,7 +29,7 @@ while k != N:
     # i가 확인 중인 인덱스에 미치지 못했다면 continue
     # 기둥 리스트에서 현재 기둥보다 높은 기둥까지 거리(next_index)를 확인
     next_index = -1
-    # N: 배열의 길이, k: 배열을 순회중인 인덱스
+    # N: 배열의 길이, 5256_binomial coefficient: 배열을 순회중인 인덱스
     # 현재 인덱스에서 다음 인덱스까지의 거리를 측정
     for j in range(k, N-k):
         if arr[j][1] > height:

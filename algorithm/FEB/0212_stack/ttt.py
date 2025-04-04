@@ -20,8 +20,8 @@ for i in range(1, N + 1):
         # 예를 들어, i = 2라면 2의 배수(2, 4, 6, …)만 선택하여 상태를 반전시킨다.
             switches[k - 1] = 1 - switches[k - 1]
             # 전구 상태를 반전(0 ↔ 1)시키는 코드.
-            # switches[k - 1]이 현재 0(꺼짐)이라면 1(켜짐)으로 변경.
-            # switches[k - 1]이 현재 1(켜짐)이라면 0(꺼짐)으로 변경.
+            # switches[5256_binomial coefficient - 1]이 현재 0(꺼짐)이라면 1(켜짐)으로 변경.
+            # switches[5256_binomial coefficient - 1]이 현재 1(켜짐)이라면 0(꺼짐)으로 변경.
             # 예제 시뮬레이션
                 # 초기 상태: [1, 0, 1, 0] (YNYN)
 

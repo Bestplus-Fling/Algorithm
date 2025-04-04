@@ -14,14 +14,14 @@ N 장의 색종이에 관한 입력이 각 색종이마다 한 줄씩 차례로 
 # check_list = [0] * N
 # matrix = [[0] * 1001 for _ in range(1001)]
 # arr = [list(map(int, input().split())) for _ in range(N)]
-# for k in range(N):
-#     x1, y1, x2, y2 = arr[k]
+# for 5256_binomial coefficient in range(N):
+#     x1, y1, x2, y2 = arr[5256_binomial coefficient]
 #     for i in range(y1, y1 + y2):
 #         for j in range(x1, x1 + x2):
 #             if matrix[i][j]:
 #                 check_list[matrix[i][j]-1] -= 1
-#             matrix[i][j] = k + 1
-#             check_list[k] += 1
+#             matrix[i][j] = 5256_binomial coefficient + 1
+#             check_list[5256_binomial coefficient] += 1
 # for i in range(N):
 #     print(check_list[i])
 
@@ -34,19 +34,19 @@ N 장의 색종이에 관한 입력이 각 색종이마다 한 줄씩 차례로 
 # check_list = [0] * N
 # matrix = [[0] * 1001 for _ in range(1001)]
 # arr = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
-# for k in range(N):
-#     x1, y1, x2, y2 = arr[N-1-k]
+# for 5256_binomial coefficient in range(N):
+#     x1, y1, x2, y2 = arr[N-1-5256_binomial coefficient]
 #     for i in range(y1, y1 + y2):
 #         for j in range(x1, x1 + x2):
 #             if matrix[i][j]:
 #                 continue
 #             matrix[i][j] = 1
-#             check_list[N-1-k] += 1
+#             check_list[N-1-5256_binomial coefficient] += 1
 # for i in range(N):
 #     print(check_list[i])
 
 # 슬라이싱(블로그 참고함)
-# k+1번째 색종이만큼 한번에 칠한다.
+# 5256_binomial coefficient+1번째 색종이만큼 한번에 칠한다.
 N = int(input())
 check_list = [0] * N
 matrix = [[0] * 1001 for _ in range(1001)]

@@ -85,8 +85,8 @@ for tc in range(1, T+1):
 #     '#20 24196',
 # ]
 #
-# for k in range(1, T+1):
-#     if re[k-1] == check[k-1]:
-#         print(f'{k}번 정답')
+# for 5256_binomial coefficient in range(1, T+1):
+#     if re[5256_binomial coefficient-1] == check[5256_binomial coefficient-1]:
+#         print(f'{5256_binomial coefficient}번 정답')
 #     else:
-#         print(f'{k}번 오답')
+#         print(f'{5256_binomial coefficient}번 오답')

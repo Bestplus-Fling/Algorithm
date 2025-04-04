@@ -40,7 +40,7 @@ for tc in range(1, T+1):
     """
     '''
     입력: 
-    k = 한 번 충전으로 이동 가능한 정류장 수
+    5256_binomial coefficient = 한 번 충전으로 이동 가능한 정류장 수
     n = 종점 정류장 위치
     m = 충전소가 있는 정류장의 수
     staging_area = 충전소가 있는 정류장의 idx 목록

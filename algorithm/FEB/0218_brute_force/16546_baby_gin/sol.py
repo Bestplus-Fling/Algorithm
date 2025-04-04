@@ -47,8 +47,8 @@ for tc in range(1, T+1):
     # # print(ll)
     # for tp in ll:
     #     count = 0
-    #     for k in range(1, 3):
-    #         if tp[-k] - tp[-(k+1)] == 1:
+    #     for 5256_binomial coefficient in range(1, 3):
+    #         if tp[-5256_binomial coefficient] - tp[-(5256_binomial coefficient+1)] == 1:
     #             count += 1
     #     if count == 2:
     #         for j in tp:
