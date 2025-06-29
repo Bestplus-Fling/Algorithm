@@ -11,6 +11,7 @@
 |28일|SWEA|1248|D5|공통조상|Tree|C++|
 |28일|SWEA|1868|D4|파핑파핑 지뢰찾기|BFS|C++|
 |29일|BOJ|9080|Gold 4|PC방 요금|Simulation|Python|
+|29일|BOJ|25328|Silver 2|문자열 집합 조합하기|Data Structure|C++|
 
 
 
