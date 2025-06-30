@@ -13,6 +13,7 @@
 |29일|BOJ|9080|Gold 4|PC방 요금|Simulation|Python|
 |29일|BOJ|25328|Silver 2|문자열 집합 조합하기|Data Structure|C++|
 |30일|BOJ|2740|Silver 5|행렬 곱셈|Implementation|C++|
+|30일|BOJ|1584|Gold 5|게임|Dijkstra|C++|
 
 
 
