@@ -22,5 +22,8 @@
 <details>
 <summary><strong>7월</strong></summary>
 
+|일자|플랫폼|문제번호|난이도|문제|유형|언어|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|1일|BOJ|5426|Silver 5|비밀 편지|String|C++|
 
 </details>
