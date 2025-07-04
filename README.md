@@ -27,5 +27,6 @@
 |1일|BOJ|5426|Silver 5|비밀 편지|String|C++|
 |2일|BOJ|30191|Gold 4|문자열 만들기 1|Ad-Hoc|C++|
 |3일|BOJ|2217|Silver 4|로프|Greedy|C++|
+|4일|BOJ|2757|Silver 3|엑셀|Math|C++|
 
 </details>
