@@ -29,5 +29,7 @@
 |3일|BOJ|2217|Silver 4|로프|Greedy|C++|
 |4일|BOJ|2757|Silver 3|엑셀|Math|C++|
 |4일|SWEA|3304|D3|최장 공통 부분 수열|DP|C++|
+|4일|SWEA|3304|D3|최장 공통 부분 수열|DP|C++|
+|4일|SWEA|3282|D3|0/1 Knapsack|DP|C++|
 
 </details>
