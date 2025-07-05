@@ -32,5 +32,6 @@
 |4일|SWEA|3304|D3|최장 공통 부분 수열|DP|C++|
 |4일|SWEA|3282|D3|0/1 Knapsack|DP|C++|
 |5일|BOJ|12865|Gold 5|평범한 배낭|DP|C++|
+|5일|SWEA|2930|D3|힙|Priority Queue|C++|
 
 </details>
