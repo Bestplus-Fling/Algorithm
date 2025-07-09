@@ -36,5 +36,6 @@
 |6일|BOJ|17276|Silver 1|배열 돌리기|Implementation|C++|
 |7일|BOJ|17276|Gold 5|항체 인식|BFS|C++|
 |8일|BOJ|20366|Gold 3|같이 눈사람 만들래?|Two Pointer|C++|
+|9일|BOJ|12887|Gold 5|경로 게임|BFS|C++|
 
 </details>
