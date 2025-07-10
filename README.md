@@ -39,5 +39,6 @@
 |9일|BOJ|12887|Gold 5|경로 게임|BFS|C++|
 |10일|BOJ|1300|Gold 1|K번째 수|Binary Search|C++|
 |10일|BOJ|15655|Silver 3|N과 M (6)|Back Tracking|C++|
+|11일|BOJ|17836|Gold 5|공주님을 구해라!|BFS|C++|
 
 </details>
