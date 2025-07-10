@@ -38,5 +38,6 @@
 |8일|BOJ|20366|Gold 3|같이 눈사람 만들래?|Two Pointer|C++|
 |9일|BOJ|12887|Gold 5|경로 게임|BFS|C++|
 |10일|BOJ|1300|Gold 1|K번째 수|Binary Search|C++|
+|10일|BOJ|15655|Silver 3|N과 M (6)|Back Tracking|C++|
 
 </details>
