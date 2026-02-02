@@ -3,7 +3,7 @@
 ## 개인 알고리즘 풀이 내용 정리
 
 <details>
-<summary><strong>6월</strong></summary>
+<summary><strong>25년 6월</strong></summary>
 
 |일자|플랫폼|문제번호|난이도|문제|유형|언어|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -20,7 +20,7 @@
 </details>
 
 <details>
-<summary><strong>7월</strong></summary>
+<summary><strong>25년 7월</strong></summary>
 
 |일자|플랫폼|문제번호|난이도|문제|유형|언어|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -28,7 +28,6 @@
 |2일|BOJ|30191|Gold 4|문자열 만들기 1|Ad-Hoc|C++|
 |3일|BOJ|2217|Silver 4|로프|Greedy|C++|
 |4일|BOJ|2757|Silver 3|엑셀|Math|C++|
-|4일|SWEA|3304|D3|최장 공통 부분 수열|DP|C++|
 |4일|SWEA|3304|D3|최장 공통 부분 수열|DP|C++|
 |4일|SWEA|3282|D3|0/1 Knapsack|DP|C++|
 |5일|BOJ|12865|Gold 5|평범한 배낭|DP|C++|
@@ -40,5 +39,15 @@
 |10일|BOJ|1300|Gold 1|K번째 수|Binary Search|C++|
 |10일|BOJ|15655|Silver 3|N과 M (6)|Back Tracking|C++|
 |11일|BOJ|17836|Gold 5|공주님을 구해라!|BFS|C++|
+
+</details>
+
+<details>
+<summary><strong>26년 2월</strong></summary>
+
+|일자|플랫폼|문제번호|난이도|문제|유형|언어|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|2일|BOJ|2231|Bronze 2|분해합|Brute Force|Python|
+
 
 </details>
