@@ -50,5 +50,6 @@
 |2일|BOJ|2231|Bronze 2|분해합|Brute Force|Python|
 |2일|BOJ|19532|Bronze 2|수학은 비대면강의입니다|Brute Force|Python|
 |3일|BOJ|1436|Silver 5|영화감독 숌|Brute Force|Python|
+|3일|BOJ|2587|Bronze 2|절대값2|Sort|Python|
 
 </details>
