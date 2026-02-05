@@ -53,5 +53,6 @@
 |3일|BOJ|2587|Bronze 2|대표값2|Sort|Python|
 |4일|BOJ|14646|Silver 5|욱제는 결정장애야!!|Implementation|Python|
 |5일|BOJ|30917|Bronze 3|A+B - 10 (제1편)|Implementation|Python|
+|5일|BOJ|30924|Silver 5|A+B - 10 (제2편)|Randomization|Python|
 
 </details>
