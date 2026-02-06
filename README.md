@@ -54,5 +54,6 @@
 |4일|BOJ|14646|Silver 5|욱제는 결정장애야!!|Implementation|Python|
 |5일|BOJ|30917|Bronze 3|A+B - 10 (제1편)|Implementation|Python|
 |5일|BOJ|30924|Silver 5|A+B - 10 (제2편)|Randomization|Python|
+|6일|BOJ|10989|Bronze 1|수 정렬하기 3|Sort|Python|
 
 </details>
