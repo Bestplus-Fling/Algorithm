@@ -58,5 +58,6 @@
 |7일|BOJ|1427|Silver 5|소트인사이드|Sort|Python|
 |8일|BOJ|9375|Silver 3|패션왕 신해빈|Combination|Python|
 |9일|BOJ|25305|Bronze 2|커트라인|Sort|Python|
+|9일|BOJ|14888|Silver 1|연산자 끼워넣기|Back Tracking|Python|
 
 </details>
