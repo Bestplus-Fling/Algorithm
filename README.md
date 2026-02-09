@@ -57,5 +57,6 @@
 |6일|BOJ|10989|Bronze 1|수 정렬하기 3|Sort|Python|
 |7일|BOJ|1427|Silver 5|소트인사이드|Sort|Python|
 |8일|BOJ|9375|Silver 3|패션왕 신해빈|Combination|Python|
+|9일|BOJ|25305|Bronze 2|커트라인|Sort|Python|
 
 </details>
