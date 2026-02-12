@@ -61,5 +61,6 @@
 |9일|BOJ|14888|Silver 1|연산자 끼워넣기|Back Tracking|Python|
 |10일|BOJ|10987|Bronze 4|모음의 개수|Implementation|Python|
 |11일|BOJ|2580|Gold 4|스도쿠|Back Tracking|Python|
+|12일|BOJ|12759|Silver 5|틱! 택! 토!|Implementation|Python|
 
 </details>
