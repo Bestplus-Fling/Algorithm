@@ -65,5 +65,6 @@
 |13일|BOJ|1010|Silver 5|다리 놓기|DP|Python|
 |14일|BOJ|12851|Gold 4|숨바꼭질 2|BFS|Python|
 |15일|BOJ|9086|Bronze 5|문자열|String|Python|
+|15일|BOJ|2941|Silver 5|크로아티아 알파벳|String|Python|
 
 </details>
