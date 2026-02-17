@@ -66,5 +66,6 @@
 |14일|BOJ|12851|Gold 4|숨바꼭질 2|BFS|Python|
 |15일|BOJ|9086|Bronze 5|문자열|String|Python|
 |15일|BOJ|2941|Silver 5|크로아티아 알파벳|String|Python|
+|16일|BOJ|25206|Silver 5|너의 평점은|Implementation|Python|
 
 </details>
