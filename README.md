@@ -72,5 +72,6 @@
 |19일|BOJ|1085|Bronze 3|직사각형에서 탈출|Geometry|Python|
 |19일|BOJ|1002|Silver 3|터렛|Geometry|Python|
 |20일|BOJ|10799|Silver 2|쇠막대기|Data Structure|Python|
+|20일|BOJ|1817|Silver 5|짐 챙기는 숌|Greedy|Python|
 
 </details>
