@@ -73,5 +73,13 @@
 |19일|BOJ|1002|Silver 3|터렛|Geometry|Python|
 |20일|BOJ|10799|Silver 2|쇠막대기|Data Structure|Python|
 |20일|BOJ|1817|Silver 5|짐 챙기는 숌|Greedy|Python|
+|20일|BOJ|2720|Bronze 3|세탁소 사장 동혁|Greedy|Python|
+|21일|BOJ|10162|Bronze 3|전자레인지|Greedy|Python|
+|22일|BOJ|25325|Silver 5|학생 인기도 측정|Data Structure|Python|
+|23일|BOJ|32978|Bronze 3|아 맞다 마늘|Data Structure|Python|
+|23일|BOJ|12605|Bronze 2|단어순서 뒤집기|String|Python|
+|23일|BOJ|2747|Bronze 2|피보나치 수|DP|Python|
+|23일|BOJ|2748|Bronze 1|피보나치 수2|DP|Python|
+|23일|BOJ|2775|Bronze 1|부녀회장이 될테야|DP|Python|
 
 </details>
